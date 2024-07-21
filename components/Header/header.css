@@ -1,0 +1,184 @@
+header {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+header h1 {
+  animation: flip 7s infinite;
+  animation-delay: calc(0.2s);
+}
+
+header a {
+  color: black;
+}
+
+.frontal-links a:hover {
+  border-bottom: 1px solid black;
+}
+
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
+}
+
+.frontal {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.frontal-links nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 1rem;
+  letter-spacing: 4px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.social-media img {
+  width: 40px;
+  height: auto;
+}
+
+.icons-media {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-media img:hover {
+  transform: translateY(-6px);
+  transition: 0.75s;
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width: 100%;
+  }
+  header .frontal {
+    padding: 30px;
+  }
+
+  header .social-media {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  header h1 {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 400px;
+  }
+
+  header h1 {
+    font-size: 50px;
+  }
+
+  body {
+    height: 150vh;
+  }
+
+  #app {
+    width: 90%;
+  }
+
+  .projects-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-media {
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    width: 500px;
+    height: 260px;
+  }
+
+  .frontal nav ul {
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: 2fr 2fr;
+    width: 300px;
+    gap: 2rem;
+  }
+
+  header h1 {
+    font-size: 50px;
+  }
+
+  .frontal-links a {
+    font-size: 14px;
+  }
+
+  .social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    width: 500px;
+  }
+
+  header .social-media {
+    width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    width: 400px;
+    height: 200px;
+  }
+
+  header .frontal {
+    gap: 2rem;
+  }
+
+  .frontal nav ul {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    width: 300px;
+    gap: 1rem;
+  }
+}

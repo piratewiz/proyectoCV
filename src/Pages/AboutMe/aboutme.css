@@ -1,0 +1,124 @@
+.presentation-container {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-space-small);
+}
+
+.presentation {
+  width: 500px;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  text-align: start;
+}
+
+.presentation h1 {
+  letter-spacing: 8px;
+}
+
+.btns {
+  display: flex;
+}
+
+.btns button {
+  align-items: center;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: var(--gap-space-small);
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  padding: var(--gap-space-small);
+  letter-spacing: 3px;
+}
+
+.btns button:before {
+  background-color: #fff;
+  content: '';
+  display: inline-block;
+  height: 1px;
+  margin-right: 10px;
+  transition: all 0.42s cubic-bezier(0.25, 0.8, 0.25, 1);
+  width: 0;
+}
+
+.btns button:hover:before {
+  background-color: #fff;
+  width: var(--gap-space-medium);
+}
+
+.marquee {
+  width: 60%;
+  height: 90px;
+  overflow: hidden;
+  white-space: nowrap;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.marquee li {
+  font-size: 50px;
+}
+
+.marquee__content {
+  display: flex;
+  list-style: none;
+  animation: scrolling 16s linear infinite;
+  gap: 3.5rem;
+}
+
+.marquee__item {
+  flex-shrink: 0;
+}
+
+.marquee__item img {
+  width: 60px;
+  height: auto;
+}
+
+@keyframes scrolling {
+  from {
+    transform: translateX(5%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 600px) {
+  .presentation-container {
+    width: 460px;
+  }
+
+  .presentation {
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .marquee {
+    width: 400px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .presentation-container {
+    width: 550px;
+  }
+}

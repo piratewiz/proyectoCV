@@ -1,0 +1,106 @@
+#main {
+  height: 70vh;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Tablets en modo horizontal y pequeñas pantallas de escritorio (entre 768px y 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #main {
+    width: 700px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projects-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body {
+    height: 165vh;
+  }
+
+  .presentation-container {
+    width: 600px;
+  }
+
+  #header {
+    width: 100%;
+    display: flex;
+  }
+
+  #app {
+    gap: 3rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+  #main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  #app {
+    gap: 2rem;
+  }
+
+  .projects-content {
+    display: flex;
+    width: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  #main {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
+
+  #app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #main h2 {
+    font-size: 18px;
+  }
+
+  #main p {
+    width: 300px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  #main {
+    text-align: center;
+    width: 380px;
+  }
+
+  body {
+    height: 180vh;
+  }
+
+  header .social-media {
+    width: 300px;
+  }
+}

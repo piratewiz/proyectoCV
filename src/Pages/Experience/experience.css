@@ -1,0 +1,136 @@
+.experience-content {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+.experience-content h2 {
+  color: rgb(67, 6, 6);
+}
+
+.experience-section {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-space-small);
+  height: 55vh;
+}
+
+.experience-section ul {
+  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-section button {
+  align-items: center;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  padding: var(--gap-space-small);
+  letter-spacing: 3px;
+}
+
+.experience-section button:before {
+  background-color: #fff;
+  content: '';
+  display: inline-block;
+  height: 1px;
+  margin-right: 10px;
+  transition: all 0.42s cubic-bezier(0.25, 0.8, 0.25, 1);
+  width: 0;
+}
+
+.experience-section button:hover:before {
+  background-color: #fff;
+  width: var(--gap-space-medium);
+}
+
+.education-button {
+  align-items: center;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: var(--gap-space-small);
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  padding: var(--gap-space-small);
+}
+
+.education-button:before {
+  background-color: #fff;
+  content: '';
+  display: inline-block;
+  height: 1px;
+  margin-right: 10px;
+  transition: all 0.42s cubic-bezier(0.25, 0.8, 0.25, 1);
+  width: 0;
+}
+
+.education-button:hover:before {
+  background-color: #fff;
+  width: var(--gap-space-medium);
+}
+
+@media (max-width: 600px) {
+  .experience-content {
+    width: 400px;
+  }
+
+  .experience-content .experience-section {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .experience-content {
+    width: 400px;
+  }
+
+  body {
+    height: 160vh;
+  }
+
+  .experience-section {
+    width: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-content {
+    margin-top: 100px;
+    width: 400px;
+  }
+
+  .experience-content .experience-section {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .experience-content p {
+    margin-top: 10px;
+  }
+}

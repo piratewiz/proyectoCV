@@ -1,0 +1,46 @@
+.avatar-img img {
+  position: relative;
+  height: 500px;
+  width: auto;
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  header {
+    height: 300px;
+  }
+
+  .avatar-img img {
+    width: 200px;
+    height: auto;
+  }
+
+  .avatar-img {
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1420px) {
+  .avatar-img {
+    margin-top: 400px;
+    left: 980px;
+  }
+
+  .avatar-img img {
+    width: 300px;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .avatar-img {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .avatar-img img {
+    width: 300px;
+    height: auto;
+  }
+}
